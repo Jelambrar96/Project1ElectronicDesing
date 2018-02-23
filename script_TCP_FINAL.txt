@@ -1,0 +1,27 @@
+# Send TCP packed to delahozdj.ddns.net
+
+# Reset previous configuration
+>SRT;CONFIG<
+
+# Configuration to ARP 
+>SRFAinternet.comcel.com.co<
+>SRFLcomcel<
+>SRFLcomcel<
+
+# Setting destination points 
+# Send a TCP packed with confirmation 
+>SXADP0001delahozdj.ddns.net;3389<
+>SXADP0101jdaguilar.ddns.net;3389<
+
+# Send a UDP packed without confirmation
+>SXADP0402delahozdj.ddns.net;3389<
+>SXADP0502jdaguilar.ddns.net;3389<
+
+# Setting destination address 
+>SDA0;P00,P01,P04,P05,P15<
+
+# Set timer event to 20 seconds 
+>SGC00TR00020<
+
+# Define an Event that reports every time the Counter is active
+>SED00NV0;C00+<
